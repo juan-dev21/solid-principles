@@ -17,5 +17,9 @@ public class OcpMain {
         // Cliente estudiante
         PaymentProcessor studentPayment = new PaymentProcessor(new StudentDiscount());
         System.out.println("Precio final para estudiante: " + studentPayment.processPayment(price));
+
+        // Cliente NTT Data
+        PaymentProcessor nttdataPayment = new PaymentProcessor(new NttDataDiscount());
+        System.out.println("Precio final para NTT Data: " + nttdataPayment.processPayment(price));
     }
 }

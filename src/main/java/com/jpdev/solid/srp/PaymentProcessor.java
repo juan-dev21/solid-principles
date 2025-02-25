@@ -47,7 +47,8 @@ public class PaymentProcessor {
         //}
 
         // Registro en la base de datos (simulado)
-        paymentRepository.save(userId, amount, "PaymentMethod");
+        String paymentMethodName = paymentMethod.getClass().getSimpleName();
+        paymentRepository.save(userId, amount, paymentMethodName);
         //(userId, amount, paymentMethod);
 
         // Envío de notificación al usuario
